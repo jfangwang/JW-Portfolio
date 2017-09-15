@@ -10,21 +10,56 @@
 	<!-- <h1 class="blocks">Jonny Wang's Portfolio</h1> -->
 </center>
 	<style>
+
+		input[type=text] {
+		    width: 130px;
+		    box-sizing: border-box;
+		    border: 2px solid #ccc;
+		    border-radius: 4px;
+		    font-size: 16px;
+		    background-color: white;
+		    background-image: url('https://res.abc.net.au/bundles/2.0.9/images/icon-search-grey@1x.png');
+
+		    background-position: 10px 10px;
+		    background-repeat: no-repeat;
+		    padding: 12px 20px 12px 40px;
+		    -webkit-transition: width 0.4s ease-in-out;
+		    transition: width 0.4s ease-in-out;
+		}
+
+		input[type=text]:focus {
+		    width:100%;
+		}
+		.menuSearch {
+			top: 1%;
+			left: 80%;
+			position: fixed;
+		}
+
 		.menu {
 		background-color: #484443;
 		box-shadow: 0px 3px 4px rgba(0,0,0,.4);
 		position:fixed;
 		top: 0;
-		left: 0;
+		left: 0%;
 		width: 100%;
 		height: 10%;
 		opacity: .96;
 		font-size: 20px;
 		font-family: Courier New;
 		color: #EEEEEE  ;
-		}
 
 		}
+		.menuName {
+			color: #EEEEEE  ;
+			font-size: 20px;
+			font-family: Courier New;
+		  height: 5%;
+			left:42%;
+			top: 0;
+			position: fixed;
+		}
+
 		h1 {
 			width: 100%;
 			padding:20px;
@@ -40,9 +75,8 @@
 			background-size:cover;
 			height: 100%;
 			width: 100%;
-
 			content: "";
-			position: absolute;
+			position:absolute;
 			top: 0;
 			bottom: 0;
 			left: 0;
@@ -85,6 +119,7 @@
 	<!-- Makes sections in the content page -->
   <center>
 
+
 		<div class="blocks">
 			<h1> About Me</h1>
 				</div>
@@ -97,25 +132,37 @@
 			<h1> Want to contact me?</h1>
 				</div>
 				<p> Click on the links below</p>
+  </center>
 
 		<div class="menu">
-		<p>Jonny Wang's Portfolio</p>
+
+		</div>
+		<div class="menuName">
+					<p>Jonny Wang's Portfolio</p>
+		</div>
+		<div class="menuSearch">
+			<form>
+					<input type="text" name="search" placeholder="Search...">
+			</form>
 		</div>
 
 
 
-  </center>
 
-  <div class="footer">
 
-  <center>
-  <!-- Linking images with a href links, my social network profiles -->
+
+	<div class="footer">
+
+	<center>
+	<!-- Linking images with a href links, my social network profiles -->
 	<div class="socialMedia">
 		<a href="https://www.facebook.com/jonny.wang.5074"> <img class= "imgFacebook" src="https://www.seeklogo.net/wp-content/uploads/2016/09/facebook-icon-preview-1-400x400.png" width=45 height=45 alt="https://www.facebook.com/"></a>
 		<a href="https://www.instagram.com/jfangwang/"> <img class= "imgInstagram" src="https://www.seeklogo.net/wp-content/uploads/2016/06/Instagram-logo.png" width=43 height=43 alt="https://www.instagram.com/" ></a>
 		<a href="https://mobile.twitter.com/jfangwang"><img class= "imgTwitter" src="https://www.seeklogo.net/wp-content/uploads/2015/11/twitter-logo.png" width=43 height=43 alt="https://twitter.com/"></a>
 		<a href="https://github.com/jfangwang"><img class= "imgGithub" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Ei-sc-github.svg/768px-Ei-sc-github.svg.png" width=46 height=46 alt="https://github.com/"></a>
 	<div>
+		</div>
+
 <br>
 Copyright © 2017 JW_Code Inc. All rights reserved.
 </center>
