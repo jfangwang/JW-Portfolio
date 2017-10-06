@@ -1,16 +1,54 @@
 <!DOCTYPE html>
 <html>
 	<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
-	<center>
 		<br>
 		<br
 		<br>
 	<title>JW-Portfolio</title>
 	<!-- <h1 class="blocks">Jonny Wang's Portfolio</h1> -->
-</center>
-	<style>
 
+	<style>
+	.container {
+	position: relative;
+	width: 50%;
+}
+
+.image {
+opacity: 1;
+display: block;
+width: 100%;
+height: auto;
+transition: .5s ease;
+backface-visibility: hidden;
+}
+
+.middle {
+transition: .5s ease;
+opacity: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+opacity: 0.3;
+}
+p:hover {
+    background-color: ;
+		opacity: .9;
+}
+
+.container:hover .middle {
+opacity: 1;
+}
+
+
+
+		/* Search Bar*/
 		input[type=text] {
 		    width: 130px;
 		    box-sizing: border-box;
@@ -19,53 +57,44 @@
 		    font-size: 16px;
 		    background-color: white;
 		    background-image: url('https://res.abc.net.au/bundles/2.0.9/images/icon-search-grey@1x.png');
-
 		    background-position: 10px 10px;
 		    background-repeat: no-repeat;
 		    padding: 12px 20px 12px 40px;
 		    -webkit-transition: width 0.4s ease-in-out;
 		    transition: width 0.4s ease-in-out;
 		}
-
 		input[type=text]:focus {
 		    width:100%;
 		}
+		/* Makes a place for the Search Bar*/
 		.menuSearch {
 			top: 1%;
 			left: 80%;
 			position: fixed;
 		}
-
+		/* Nav bar of website */
 		.menu {
 		background-color: #484443;
 		box-shadow: 0px 3px 4px rgba(0,0,0,.4);
 		position:fixed;
-		top: 0;
+		top: 0%;
 		left: 0%;
 		width: 100%;
-		height: 10%;
+		height: 7%;
 		opacity: .96;
 		font-size: 20px;
 		font-family: Courier New;
 		color: #EEEEEE  ;
-
 		}
+		/* spot for name for nav bar */
 		.menuName {
 			color: #EEEEEE  ;
-			font-size: 20px;
+			font-size: 30px;
 			font-family: Courier New;
 		  height: 5%;
-			left:42%;
-			top: 0;
+			left:37%;
+			top: 2%;
 			position: fixed;
-		}
-
-		h1 {
-			width: 100%;
-			padding:20px;
-			font-size: 40px;
-			opacity: .70;
-			background-color: lightblue;
 		}
 		/* Background image */
 		body {
@@ -84,62 +113,62 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
-
 			}
-
 		.footer {
-			width: 100%;
-			background-color: #f1f1f1;
-			padding: 30px;
-			text-align: bottom;
+			width: 90%;
+			margin: 5px;
+			background-color: white;
+			padding: 4.2%;
 			opacity: .70;
+			font-size: 15px;
+			font-style: monospace;
 		}
 		.blocks {
-			width: 100%;
+			width: 90%;
 			background-color: lightblue;
-			margin: 10px;
-			padding: 10px;
+			margin: 5px;
+			padding: 4.2%;
 			opacity: .70;
+			font-size: 40px;
+			opacity: .70;
+			background-color: lightblue;
+
 		}
-
-
-
-
-
-<center>
-
-</center>
-
+		.content {
+			width: 90%;
+		  margin: 5px;
+			background-color: white;
+			padding: 4.2%;
+			opacity: .70;
+			font-size: 20px;
+			font-style: monospace;
+			}
 
 	</style>
-
 	</head>
 	<body>
+<br>
+
+</div>
+
 	<!-- This is a comment -->
 	<!-- Makes sections in the content page -->
-  <center>
 
-
-		<div class="blocks">
-			<h1> About Me</h1>
-				</div>
-				<p> This is my portfolio and I built this website with HTML, CSS, and Javascript </p>
-				<div class="blocks">
-			<h1> Resume</h1>
-				</div>
-				<p> Still in the works... </p>
-				<div class="blocks">
-			<h1> Want to contact me?</h1>
-				</div>
-				<p> Click on the links below</p>
-  </center>
+		<div class="blocks"> About Me </div>
+				<p class="content"> This is my portfolio and I built this website myself with HTML, CSS, and Javascript </p>
+		<div class="blocks"> Resume </div>
+				<p class="content"> Still in the works... </p>
+		<div class="blocks"> Want to contact me? </div>
+				<p class="content"> Click on the links below</p>
 
 		<div class="menu">
+			<a href="https://www.facebook.com/jonny.wang.5074"> <img class= "imgFacebook" src="https://www.seeklogo.net/wp-content/uploads/2016/09/facebook-icon-preview-1-400x400.png" width=45 height=45 alt="https://www.facebook.com/"></a>
+			<a href="https://www.instagram.com/jfangwang/"> <img class= "imgInstagram" src="https://www.seeklogo.net/wp-content/uploads/2016/06/Instagram-logo.png" width=43 height=43 alt="https://www.instagram.com/" ></a>
+			<a href="https://mobile.twitter.com/jfangwang"><img class= "imgTwitter" src="https://www.seeklogo.net/wp-content/uploads/2015/11/twitter-logo.png" width=43 height=43 alt="https://twitter.com/"></a>
+			<a href="https://github.com/jfangwang"><img class= "imgGithub" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Ei-sc-github.svg/768px-Ei-sc-github.svg.png" width=46 height=46 alt="https://github.com/"></a>
+		</div>
 
-		</div>
-		<div class="menuName">
-					<p>Jonny Wang's Portfolio</p>
-		</div>
+		<div class="menuName"> Jonny Wang's Portfolio </div>
 		<div class="menuSearch">
 			<form>
 					<input type="text" name="search" placeholder="Search...">
@@ -147,26 +176,15 @@
 		</div>
 
 
-
-
-
-
 	<div class="footer">
-
-	<center>
-	<!-- Linking images with a href links, my social network profiles -->
-	<div class="socialMedia">
-		<a href="https://www.facebook.com/jonny.wang.5074"> <img class= "imgFacebook" src="https://www.seeklogo.net/wp-content/uploads/2016/09/facebook-icon-preview-1-400x400.png" width=45 height=45 alt="https://www.facebook.com/"></a>
-		<a href="https://www.instagram.com/jfangwang/"> <img class= "imgInstagram" src="https://www.seeklogo.net/wp-content/uploads/2016/06/Instagram-logo.png" width=43 height=43 alt="https://www.instagram.com/" ></a>
-		<a href="https://mobile.twitter.com/jfangwang"><img class= "imgTwitter" src="https://www.seeklogo.net/wp-content/uploads/2015/11/twitter-logo.png" width=43 height=43 alt="https://twitter.com/"></a>
-		<a href="https://github.com/jfangwang"><img class= "imgGithub" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Ei-sc-github.svg/768px-Ei-sc-github.svg.png" width=46 height=46 alt="https://github.com/"></a>
-	<div>
-		</div>
-
-<br>
-Copyright © 2017 JW_Code Inc. All rights reserved.
+			<!-- Linking images with a href links, my social network profiles -->
+			<center>
+			<a href="https://www.facebook.com/jonny.wang.5074"> <img class= "imgFacebook" src="https://www.seeklogo.net/wp-content/uploads/2016/09/facebook-icon-preview-1-400x400.png" width=45 height=45 alt="https://www.facebook.com/"></a>
+			<a href="https://www.instagram.com/jfangwang/"> <img class= "imgInstagram" src="https://www.seeklogo.net/wp-content/uploads/2016/06/Instagram-logo.png" width=43 height=43 alt="https://www.instagram.com/" ></a>
+			<a href="https://mobile.twitter.com/jfangwang"><img class= "imgTwitter" src="https://www.seeklogo.net/wp-content/uploads/2015/11/twitter-logo.png" width=43 height=43 alt="https://twitter.com/"></a>
+			<a href="https://github.com/jfangwang"><img class= "imgGithub" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Ei-sc-github.svg/768px-Ei-sc-github.svg.png" width=46 height=46 alt="https://github.com/"></a>
+	<br>Copyright © 2017 JW_Code Inc. All rights reserved.
 </center>
 </div>
-
 </body>
 </html>
