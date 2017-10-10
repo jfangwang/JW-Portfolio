@@ -16,6 +16,9 @@
 	<!-- <h1 class="blocks">Jonny Wang's Portfolio</h1> -->
 
 	<style>
+	@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+	@import url('https://fonts.googleapis.com/css?family=Kalam');
+
 		.contact {
 			text-align: center;
 
@@ -44,10 +47,9 @@
 		.menuName {
 			color: #EEEEEE  ;
 			font-size: 30px;
-			font-family: Courier New;
-		  height: 5%;
-			left:400px;
-			top: 2%;
+			font-family: "Kalam",cursive;
+			left:37%;
+			top: 10px;
 			position: fixed;
 		}
 		/* Background image */
@@ -92,82 +94,84 @@
 			font-size: 20px;
 			font-style: monospace;
 			}
+			.socialNetwork {
+				position: fixed;
+				left:15px;
+				top:15px;
+			}
 
+			.searchBar {
+			  margin: 0px 50px;
+			  display: inline-block;
+			  height: 20px;
+				right:150px;
+				top:80px;
+			  padding: 0;
+			  position: fixed;
+			}
+
+			input[type="text"] {
+			  height: 60px;
+			  font-size: 55px;
+			  display: inline-block;
+			  font-family: "Lato";
+			  font-weight: 100;
+			  border: none;
+			  outline: none;
+			  color: white;
+			  padding: 3px;
+			  padding-right: 60px;
+			  width: 0px;
+			  position: absolute;
+			  top: 0;
+			  right: 0;
+			  background: none;
+			  z-index: 1;
+			  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+			  cursor: pointer;
+			}
+
+			input[type="text"]:focus:hover {
+			  border-bottom: 1px solid white;
+				opacity: 1;
+			}
+
+			input[type="text"]:focus {
+			  width: 800px;
+			  z-index: 1;
+			  border-bottom: 1px solid white;
+			  cursor: text;
+			}
+			input[type="submit"] {
+			  height: 67px;
+			  width: 63px;
+			  display: inline-block;
+			  background: url(http://www.clker.com/cliparts/n/U/H/1/H/u/search-icon-white-one-md.png) center no-repeat;
+				background-size: 90%;
+			  text-indent: -10000px;
+			  border: none;
+			  position: absolute;
+			  top: 0;
+			  right: 0;
+			  z-index: 2;
+			  cursor: pointer;
+			  opacity: 0.4;
+			  cursor: pointer;
+			  transition: opacity .4s ease;
+			}
+
+			input[type="submit"]:hover {
+			  opacity: 0.8;
+			}
+			input::placeholder {
+			  color: white;
+			}
 
 	</style>
 	</head>
 	<body>
 
 		<style>
-		@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
-
-#wrap {
-  margin: 0px 50px;
-  display: inline-block;
-  height: 20px;
-	right:150px;
-	top:10%;
-  padding: 0;
-  position: absolute;
-}
-
-input[type="text"] {
-  height: 60px;
-  font-size: 55px;
-  display: inline-block;
-  font-family: "Lato";
-  font-weight: 100;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 3px;
-  padding-right: 60px;
-  width: 0px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: none;
-  z-index: 3;
-  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
-  cursor: pointer;
-}
-
-input[type="text"]:focus:hover {
-  border-bottom: 1px solid white;
-	opacity: 1;
-}
-
-input[type="text"]:focus {
-  width: 800px;
-  z-index: 1;
-  border-bottom: 1px solid white;
-  cursor: text;
-}
-input[type="submit"] {
-  height: 67px;
-  width: 63px;
-  display: inline-block;
-  background: url(http://www.clker.com/cliparts/n/U/H/1/H/u/search-icon-white-one-md.png) center no-repeat;
-	background-size: 90%;
-  text-indent: -10000px;
-  border: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  cursor: pointer;
-  opacity: 0.4;
-  cursor: pointer;
-  transition: opacity .4s ease;
-}
-
-input[type="submit"]:hover {
-  opacity: 0.8;
-}
-input::placeholder {
-  color: white;
-}
-
 		/*input[type=text] {
 			width: 200px;
 			box-sizing: border-box;
@@ -184,15 +188,17 @@ input::placeholder {
 			width: 100%;
 		}*/
 		</style>
+
 		<script src="JWportfolio.js"></script>
 		<form name="JWForm">
 			<input type="checkbox" name="thebox">
 			<input type="button" value="Press me!" onClick="validator()">
 
-		<div class="contact"><a href="#Contact" ><center>Contact</center></a></div>
-		<div id="wrap">
+
+		<div class="searchBar">
   <form action="" autocomplete="on">
-  <input id="search" name="search" type="text" placeholder="What're we looking for?"><input id="search_submit" value="Rechercher" type="submit">
+  <input id="search" name="search" type="text" placeholder="What're we looking for?">
+	<img src="http://www.clker.com/cliparts/n/U/H/1/H/u/search-icon-white-one-md.png"height=60 width=60>
   </form>
 </div>
 
@@ -201,22 +207,28 @@ input::placeholder {
 	<!-- This is a comment -->
 	<!-- Makes sections in the content page -->
 
-		<div class="blocks"> About Me </div>
-				<p class="content"> This is my portfolio and I built this website myself with HTML, CSS, and Javascript </p>
-		<div class="blocks"> Resume </div>
-				<p class="content"> Still in the works... </p>
-		<div class="blocks"><a name="Contact"></a>Want to contact me?</div>
-				<p class="content"> Click on the links below</p>
-		<div class="menu">
-			<a href="https://www.facebook.com/jonny.wang.5074"> <img class= "imgFacebook" src="https://www.seeklogo.net/wp-content/uploads/2016/09/facebook-icon-preview-1-400x400.png" width=45 height=45 alt="https://www.facebook.com/"></a>
-			<a href="https://www.instagram.com/jfangwang/"> <img class= "imgInstagram" src="https://www.seeklogo.net/wp-content/uploads/2016/06/Instagram-logo.png" width=43 height=43 alt="https://www.instagram.com/" ></a>
-			<a href="https://mobile.twitter.com/jfangwang"><img class= "imgTwitter" src="https://www.seeklogo.net/wp-content/uploads/2015/11/twitter-logo.png" width=43 height=43 alt="https://twitter.com/"></a>
-			<a href="https://github.com/jfangwang"><img class= "imgGithub" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Ei-sc-github.svg/768px-Ei-sc-github.svg.png" width=46 height=46 alt="https://github.com/"></a>
-		</div>
+	<div class="blocks"> About Me </div>
+			<p class="content"> This is my portfolio and I built this website myself with HTML, CSS, and Javascript </p>
+	<div class="blocks"> Resume </div>
+			<p class="content"> Still in the works... </p>
+	<div class="blocks">Want to contact me?</div>
+			<p class="content"> Click on the links below</p>
 
-		<div class="menuName"> Jonny Wang's Portfolio </div>
+		<div class="menu"></div>
+		<a href="#aboutMe" ><div class="menuName"> Jonny Wang's Portfolio </div></a>
+
+		<div class="socialNetwork">
+
+				<a href="https://www.facebook.com/jonny.wang.5074"> <img class= "imgFacebook" src="https://www.seeklogo.net/wp-content/uploads/2016/09/facebook-icon-preview-1-400x400.png" width=45 height=45 alt="https://www.facebook.com/"></a>
+				<a href="https://www.instagram.com/jfangwang/"> <img class= "imgInstagram" src="https://www.seeklogo.net/wp-content/uploads/2016/06/Instagram-logo.png" width=43 height=43 alt="https://www.instagram.com/" ></a>
+				<a href="https://mobile.twitter.com/jfangwang"><img class= "imgTwitter" src="https://www.seeklogo.net/wp-content/uploads/2015/11/twitter-logo.png" width=43 height=43 alt="https://twitter.com/"></a>
+				<a href="https://github.com/jfangwang"><img class= "imgGithub" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Ei-sc-github.svg/768px-Ei-sc-github.svg.png" width=46 height=46 alt="https://github.com/"></a>
+			</div>
+
+
 
 	<div class="footer">
+		<a name="aboutMe"></a>
 			<!-- Linking images with a href links, my social network profiles -->
 			<center>
 			<a href="https://www.facebook.com/jonny.wang.5074"> <img class= "imgFacebook" src="https://www.seeklogo.net/wp-content/uploads/2016/09/facebook-icon-preview-1-400x400.png" width=45 height=45 alt="https://www.facebook.com/"></a>
