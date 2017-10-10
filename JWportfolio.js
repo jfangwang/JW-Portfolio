@@ -1,4 +1,4 @@
-document.write("This is the JWportfolio Javascript document!");
+
   function validator(){
     if(document.JWForm.thebox.checked)
       alert("It is checked!");
