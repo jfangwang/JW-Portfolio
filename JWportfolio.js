@@ -1,4 +1,4 @@
-
+//asdf
   function validator(){
     if(document.JWForm.thebox.checked)
       alert("It is checked!");
